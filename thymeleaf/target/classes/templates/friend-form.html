@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.pussy.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Form</title>
+    <link rel="stylesheet" href="css/friendstyle.css"> <!-- Подключаем внешний CSS файл -->
+</head>
+<body>
+<br><br>
+<h2 class="centered-title"> Friend Form</h2>
+<br><br>
+
+<form th:action="@{processFriendForm}" th:object="${friend}" method="post">
+
+    First name: <input type="text" th:field="*{firstName}"/>
+    <br><br>
+
+    Last name: <input type="text" th:field="*{lastName}"/>
+    <br><br>
+
+    Sex:
+    <select th:field="*{sex}">
+        <option th:value="boy">Boy</option>
+        <option th:value="girl">Girl</option>
+    </select>
+    <br><br>
+
+    City:
+    <select th:field="*{city}">
+        <option th:each="tempCity : ${cities}" th:value="${tempCity}" th:text="${tempCity}"></option>
+    </select>
+    <br><br>
+
+    Favourite drink:
+    <input type="radio" th:field="*{favouriteDrink}" th:each="tempDrink : ${drinks}"
+           th:value="${tempDrink}" th:text="${tempDrink}"/>
+
+    <br><br>
+
+    Do you have a pet?
+    <input type="checkbox" th:field="*{pets}" th:each="tempPets : ${pets}"
+           th:value="${tempPets}" th:text="${tempPets}"/>
+
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

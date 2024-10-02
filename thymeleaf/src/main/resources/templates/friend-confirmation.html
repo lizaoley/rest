@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Confirmation</title>
+    <link rel="stylesheet" href="css/friendstyle.css">
+    <style>
+        .centered-list {
+            list-style-position: inside;
+            text-align: center;
+            display: inline-block;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+<br><br>
+<h2 class="centered-title"> Friend Form</h2>
+<br><br>
+<div class="centered-title">
+    The friend is <span th:text="${friend.firstName} + ' ' + ${friend.lastName}"/>.
+    <br> <br>
+    This is a <span th:text="${friend.sex}"/>.
+    <br> <br>
+    Friend from <span th:text="${friend.city}"/>.
+    <br> <br>
+    A friend's favorite drink <span th:text="${friend.favouriteDrink}"/>.
+    <br> <br>
+    <div class="centered-container">
+        A friend has:
+        <ul class="centered-list">
+            <li th:each="onepet : ${friend.pets}" th:text="${onepet}"></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

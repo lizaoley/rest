@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.pussy.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Form</title>
+    <link rel="stylesheet" href="css/friendstyle.css"> <!-- Подключаем внешний CSS файл -->
+</head>
+<body>
+
+<br>
+<br>
+<form th:action="@{/processFriendForm3}" method="post">
+
+    <input type="text" name="friendName" placeholder="Enter name of friend"/>
+    <br>
+    <br>
+    <input type="submit">
+</form>
+
+
+</body>
+</html>

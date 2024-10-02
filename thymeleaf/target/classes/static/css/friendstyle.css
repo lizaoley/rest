@@ -1,0 +1,21 @@
+body {
+    font-style: italic;
+    background-color: lightblue; /* Замените на нужный цвет */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Заставляем body занимать всю высоту экрана */
+}
+.centered-title {
+    text-align: center; /* Центровка текста по горизонтали */
+}
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.centered-list {
+    margin-top: 0;
+    padding-left: 20px; /* Чтобы отодвинуть точки от текста */
+}

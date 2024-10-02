@@ -1,0 +1,12 @@
+.firststyle {
+    font-style: italic;
+    color: #ff0083;
+    background-color: #f9d0ff;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Заставляем body занимать всю высоту экрана */
+    display: flex;
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    align-items: center; /* Центровка содержимого по вертикали */
+
+}
