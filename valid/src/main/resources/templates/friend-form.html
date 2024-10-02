@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.pussy.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Form</title>
+    <link rel="stylesheet" href="friend.css">
+</head>
+<body>
+<br><br>
+<h2 class="centered-title"> Friend Form</h2>
+<br><br>
+Fill the form. Enter data in required fields.
+<br><br>
+<form th:action="@{/processForm}" th:object="${friend}" method="post">
+
+    First name: <input type="text" th:field="*{firstName}">
+    <br><br>
+    Last name: <input type="text" th:field="*{lastName}">
+
+    <span th:if="${#fields.hasErrors('lastName')}"
+          th:errors="${friend.lastName}" class="error"> </span>
+    <br><br>
+
+    Age: <input type="text" th:field="*{age}">
+    <span th:if="${#fields.hasErrors('age')}"
+          th:errors="${friend.age}" class="error"> </span>
+    <br><br>
+
+    Zip Code: <input type="text" th:field="*{zipCode}">
+    <span th:if="${#fields.hasErrors('zipCode')}"
+          th:errors="${friend.zipCode}" class="error"> </span>
+    <br><br>
+
+    Car number: <input type="text" th:field="*{carNumber}">
+    <span th:if="${#fields.hasErrors('carNumber')}"
+          th:errors="${friend.carNumber}" class="error"> </span>
+    <br><br>
+
+    <input type="submit">
+</form>
+
+
+</body>
+</html>

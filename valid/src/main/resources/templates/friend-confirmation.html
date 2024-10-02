@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Information</title>
+  <link rel="stylesheet" href="friend.css">
+
+</head>
+<body>
+<br><br>
+<h2 class="centered-title"> Friend Information </h2>
+<br><br>
+
+Friend:  <span th:text="${friend.firstName +' '+ friend.lastName}"> </span>
+<br><br>
+Age of friend:  <span th:text="${friend.age}"> </span>
+<br><br>
+Zip Code of friend:  <span th:text="${friend.zipCode}"> </span>
+<br><br>
+Car number of friend:  <span th:text="${friend.carNumber}"> </span>
+
+
+
+
+
+</body>
+</html>
