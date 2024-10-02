@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Page</title>
+    <style>
+        body {
+            padding: 30px; /* Внутренний отступ для всего тела страницы */
+            font-style: revert;
+            color: #0d0129;
+            background-color: #b4d8ef; /* Замените на нужный цвет */
+            height: 100vh; /* Заставляем body занимать всю высоту экрана */
+            box-sizing: border-box; /* Учитываем padding в общую ширину страницы */
+        }
+
+        .centered-title {
+            text-align: center; /* Центровка текста по горизонтали */
+        }
+    </style>
+</head>
+<body>
+<br><br>
+<h2 class="centered-title"> Manager Page </h2>
+<br><br>
+<div>
+    <span> Fire bad employees </span>
+</div>
+<br><br>
+<a th:href="@{/}"> Back to Home Page </a>
+
+</body>
+</html>
